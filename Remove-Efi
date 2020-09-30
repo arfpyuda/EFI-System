@@ -1,0 +1,24 @@
+Sebelum melakukan comand ini, pastikan disk sudah di hapus melalui disk managament atau software lainnya.
+kemudian masuk ke cmd dengan mode administrator dan lakukan perintah :
+    
+    1. diskpart
+    2. list disk
+    3. select disk
+    4. select disk 0 (untuk masuk kedalam system)
+    5. list partition (untuk melihat partisi apa yang ada di dalam disk 0 atau yang kita pilih)
+    6. select partition 2 (pilih partition dengan type SYSTEM)
+    7. assign letter=x (untuk memisahkan pasrtition dari dalam system)
+    8. exit
+    9. x:
+    10. dir (untuk melihat lokasi cd efi)
+    11. cd efi
+    12. dir (untuk melihat jenis distro yang kita gunakan)
+    13. rd ubuntu /s (disini saya menggunakan ubuntu, tuliskan jenis linux apa yang sedang di gunakan)
+    14. Y
+    15. dir (melihat apakah distro tersebut masih ada atau tidak, jika tidak berarti sudah sukses di hapus)
+    16. exit
+    
+    setelah semua langakah sudah di lakukan, kita bisa langsung restart laptop atau pc kita, atau masuk ke bios untuk melihat boot nya sudah terhapus atau belum
+    pastikan boot partition #1 sudah menjadi windows, jika belum silahkan rubah secara manual seperti anda melakukan perubahan saat menginstall linux sebelumnya.
+    
+    selesai.
