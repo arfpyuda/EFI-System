@@ -1,0 +1,30 @@
+ini adalah cara yang di lakukan ketika kita akan menghapus efi boot yang masih menempel di bios :
+
+
+      1. Masuk ke CMD As Administrator
+      
+      2. bcdedit /enum firmware
+      
+      3. bcdedit /export newbcd
+      
+      4. copy newbcd bcdbackup
+      
+      5. bcdedit /store newbcd /delette ...... (nomer efi boot identifier seperti dibawah ini)
+          
+          - firmware application (23123213#)
+          -----------------------------------
+          identifier      {653463434643346343}
+          device            partition
+          path              EFI/ubuntu
+          description       ubuntu
+         -------------------------------------------
+      
+       6. bcdedit /import newbcd /clean
+       
+       7. exit
+       
+       8. restart
+       
+       
+-----------------------------------------------------------------------------------------------------------------------------
+Referensi : https://izzylaif.com/en/clear-up-bios-boot-menu-entries/
